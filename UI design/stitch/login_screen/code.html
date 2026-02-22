@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BIZFLOW Login - Streamline Your Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="flex min-h-screen flex-col items-center justify-center px-6 py-12">
+<!-- Logo Section -->
+<div class="mb-10 text-center">
+<div class="flex items-center justify-center mb-2">
+<div class="bg-primary/10 p-3 rounded-xl flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1">
+                        account_tree
+                    </span>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">BIZFLOW</h1>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium">Streamline Your Success</p>
+</div>
+<!-- Login Form Container -->
+<div class="w-full max-w-sm">
+<form class="space-y-6">
+<!-- Email Field -->
+<div>
+<label class="block text-sm font-semibold leading-6 text-slate-900 dark:text-slate-200 mb-1.5" for="email">Email Address</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">mail</span>
+</div>
+<input autocomplete="email" class="block w-full rounded-lg border-0 py-3.5 pl-10 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:text-white dark:ring-slate-700 sm:text-sm sm:leading-6" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<label class="block text-sm font-semibold leading-6 text-slate-900 dark:text-slate-200 mb-1.5" for="password">Password</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">lock</span>
+</div>
+<input autocomplete="current-password" class="block w-full rounded-lg border-0 py-3.5 pl-10 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:text-white dark:ring-slate-700 sm:text-sm sm:leading-6" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Options Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-800" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-700 dark:text-slate-400" for="remember-me">Remember me</label>
+</div>
+<div class="text-sm">
+<a class="font-semibold text-primary hover:text-primary/80" href="#">Forgot password?</a>
+</div>
+</div>
+<!-- Login Button -->
+<div>
+<button class="flex w-full justify-center rounded-lg bg-primary px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" type="submit">
+                        Sign In
+                    </button>
+</div>
+</form>
+<!-- Registration Footer -->
+<p class="mt-10 text-center text-sm text-slate-500 dark:text-slate-400">
+                New to BIZFLOW?
+                <a class="font-semibold leading-6 text-primary hover:text-primary/80 ml-1" href="#">Create an account</a>
+</p>
+</div>
+<!-- Decorative Bottom Nav (Simplified for Login) -->
+<div class="fixed bottom-0 left-0 w-full flex justify-center pb-8 pt-4 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+<div class="flex gap-8 text-slate-400">
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-[10px] uppercase tracking-wider font-bold">Help</span>
+</a>
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">language</span>
+<span class="text-[10px] uppercase tracking-wider font-bold">English</span>
+</a>
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">privacy_tip</span>
+<span class="text-[10px] uppercase tracking-wider font-bold">Privacy</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

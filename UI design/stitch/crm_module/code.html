@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BIZFLOW - Customer CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2463eb",
+                "background-light": "#f6f6f8",
+                "background-dark": "#111621",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen pb-24">
+<!-- Header & Navigation -->
+<header class="sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 h-16">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">BIZFLOW</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-300">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="text-xs font-bold text-primary">JD</span>
+</div>
+</div>
+</div>
+<!-- Title & Search Area -->
+<div class="px-4 pb-4 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold">Customers</h2>
+<span class="text-xs font-medium px-2 py-1 bg-primary/10 text-primary rounded-full">124 Total</span>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg leading-5 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm transition-all shadow-sm" placeholder="Search by name, email or company..." type="text"/>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="px-4 overflow-x-auto no-scrollbar">
+<div class="flex gap-2 pb-3 min-w-max">
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold shadow-md shadow-primary/20">All</button>
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-slate-50">Recent</button>
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-slate-50">Top Spenders</button>
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-slate-50">Inactive</button>
+</div>
+</div>
+</header>
+<!-- Customer List -->
+<main class="p-4 space-y-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Professional portrait of Jane Cooper" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDY_ADerx58KFDW4TQ4X_5UeLFX4faZrL8fQfK9022NP91ZR9B9GdarmtAvhxPRTqEhVfXnsKSKJRjIcW3VpZpC3m7gtedFfbbpe_kJLIkWx-QPGAnUlr1sjkbHefxwTy00wICg1HF11b25k6qrexqCc_m2jgA_zSK8Oci5ZjmcERc8P_uL7SXI89tOqdq5BWS_Ik-zqDs5lmKb1plBw8hDIK-78HBUbjgeROQ_5vqNknmfenHUobwLnzQ7_lYB9X0EglqvmmadwMag')"></div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Jane Cooper</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">jane@example.com</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                    Active
+                </span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Purchases</span>
+<span class="text-lg font-bold text-primary">$450.00</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Professional portrait of Guy Hawkins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxFBY8WlkZKupQKJuZ6wJRDXvbyqDDqabSDf8fKUqQ5cMZgSfrCB04G5fkIP5DCdqyoE7Nz4OaIHfTaWA5pbv06lsTdHlFOT94HYaUK4bN9J_sAltcFOVZ7sV7AGeXUxLbPbjEObG16sRc33SthZrvNq8LLvamxXsiJPyPx1dieQ3fu-EG41YgJzAaWO8KzBgcGGzpJlbK_0ED8VsBA9mXcDnftST0Yl2He9Wt1MdRoEbsQaO7K8mmGc-dDHJCNEQGp-fJvJQ0-nXl')"></div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Guy Hawkins</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">guy.h@company.io</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                    Active
+                </span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Purchases</span>
+<span class="text-lg font-bold text-primary">$1,280.50</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Professional portrait of Eleanor Pena" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO-_ay037HqvOJxaF6aesF_ESyxVU-m-RLd4m3_pvqBU3HOhfdm74JhKwU6RP6_i-M6wIxomp-2VWXfCTuF5IpZYvpmj3k_AN0IdEX3Bbew7y4gnrAj2ljUkromKz5PXKj_bWbGHucVBQs_5yNuEVU9yxsdIEjrbOZajGyUV5trEnW7isWVjv7qZu4iMoYiSYec6edHuw48EeuCppk3df9VZJTyE7hzyrnXLtD8kYmtbPNAeXhILPQQrCGYNotYp29_yYKWdqVKbiI')"></div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Eleanor Pena</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">eleanor.pena@gmail.com</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                    Lead
+                </span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Purchases</span>
+<span class="text-lg font-bold text-primary">$0.00</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Professional portrait of Robert Fox" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_wICKRWDjNUAX_xpKmFprnpN_Tmn2yTclKmzk79PB-4KVTwk_r0WS5C0wr3IwxZll1c22saVeDuIOvMYGKqzdCPiVeCuk_iAZHOpXfc-ojNEU77pJ9jzqEh_CTKxFwljWWPKVs8ugQCQ4z2OgBunx2-Pnpnn6RA2-7UIRGnW9YtZxkY3DmswSTvS1MeISNy0uDvJkJWPWJ2U8TadILtdmOyezSsByGQkHo9j7MgKYu7U_jc8e12thN58gHWit8nOBPdROj9NxxYYN')"></div>
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">Robert Fox</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">robert.f@startup.com</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-400">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-1.5"></span>
+                    Inactive
+                </span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Purchases</span>
+<span class="text-lg font-bold text-primary">$892.20</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">group</span>
+<span class="text-[10px] font-bold">Customers</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Tasks</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</a>
+</nav>
+</body></html>
