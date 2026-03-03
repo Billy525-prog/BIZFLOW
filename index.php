@@ -149,8 +149,7 @@ if(isset($_SESSION['user_id'])) {
                     </div>
 
                     <button type="submit" name="register" class="btn btn-primary">
-                        <i a href="forgot-password.php"class="fas fa-user-plus"></i> Register
-                    </button>
+                        <i a href="register.php"class="fas fa-user-plus"></i>Register</button>
                 </form>
             </div>
         </div>
