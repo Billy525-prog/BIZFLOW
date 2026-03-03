@@ -99,7 +99,7 @@ if(isset($_SESSION['user_id'])) {
                 </form>
 
                 <!-- Register Form -->
-                <form id="registerForm" action="includes/register-process.php" method="POST" style="display: none;">
+                <form id="registerForm" action="includes/register.php" method="POST" style="display: none;">
                     <div class="form-group">
                         <label for="fullname">Full Name</label>
                         <div class="input-group">
@@ -149,7 +149,7 @@ if(isset($_SESSION['user_id'])) {
                     </div>
 
                     <button type="submit" name="register" class="btn btn-primary">
-                        <i a href="register.php"class="fas fa-user-plus"></i>Register</button>
+                        <i class="fas fa-user-plus"></i>Register</button>
                 </form>
             </div>
         </div>
