@@ -92,7 +92,7 @@ if(isset($_SESSION['user_id'])) {
                             <input type="password" id="password" name="password" placeholder="••••••••" required>
                         </div>
                     </div>
-
+                    
                     <button type="submit" name="login" class="btn btn-primary">
                         <i class="fas fa-sign-in-alt"></i> Sign In
                     </button>
@@ -149,7 +149,8 @@ if(isset($_SESSION['user_id'])) {
                     </div>
 
                     <button type="submit" name="register" class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i>Register</button>
+                        <i class="fas fa-user-plus"></i> Register
+                    </button>
                 </form>
             </div>
         </div>
