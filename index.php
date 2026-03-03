@@ -93,13 +93,6 @@ if(isset($_SESSION['user_id'])) {
                         </div>
                     </div>
 
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox" name="remember"> Remember me
-                        </label>
-                        <a href="forgot-password.php" class="forgot-password">Forgot password?</a>
-                    </div>
-
                     <button type="submit" name="login" class="btn btn-primary">
                         <i class="fas fa-sign-in-alt"></i> Sign In
                     </button>
@@ -156,7 +149,7 @@ if(isset($_SESSION['user_id'])) {
                     </div>
 
                     <button type="submit" name="register" class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i> Register
+                        <a href="forgot-password.php" class="fas fa-user-plus"></i> Register
                     </button>
                 </form>
             </div>
